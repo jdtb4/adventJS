@@ -20,12 +20,17 @@ Retos de programación para navidad
     <tbody>
         <tr>
             <td align = "center">1</td>
-            <td>🎁 ¡Primer regalo repetid</td>
+            <td>🎁 ¡Primer regalo repetido!</td>
             <td align = "center">🟢</td>
             <td align = "center">🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto1.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">2</td>
+            <td>🖼️ Emmarcando nombres</td>
+            <td align = "center">🟢</td>
+            <td align = "center">🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto2.md">📝</a></td>
     </tbody>
 </table>
-
 </div>

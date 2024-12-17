@@ -1,5 +1,15 @@
-function prepareGifts(gifts) {
-  return [...new Set(gifts)].sort((a, b) => a - b);
+function createFrame(names) {
+  const max = Math.max(...names.map((name) => name.length));
+  const border = "*".repeat(max + 4);
+  return (
+    border +
+    "\n" +
+    names
+      .map((name) => `* ${name}${" ".repeat(max - name.length)} *`)
+      .join("\n") +
+    "\n" +
+    border
+  );
 }
 
-console.log(prepareGifts([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(createFrame(["midu", "madeval", "educalvolpz"]));
