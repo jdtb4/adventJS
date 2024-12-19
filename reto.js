@@ -1,22 +1,16 @@
-function organizeShoes(shoes) {
-  const counts = {};
-
-  for (const { type, size } of shoes) {
-    counts[size] = counts[size] || { I: 0, R: 0 };
-    counts[size][type]++;
+function inBox(box) {
+  for (let i = 1; i < box.length - 1; i++) {
+    if (
+      box[i][0] === "#" &&
+      box[i][box[i].length - 1] === "#" &&
+      box[i].includes("*")
+    ) {
+      return true;
+    }
   }
-
-  return Object.entries(counts).flatMap(([size, { I, R }]) =>
-    Array(Math.min(I, R)).fill(+size)
-  );
+  return false;
 }
 
-const shoes = [
-  { type: "I", size: 38 },
-  { type: "R", size: 38 },
-  { type: "R", size: 42 },
-  { type: "I", size: 41 },
-  { type: "I", size: 42 },
-];
+const box = ["###", "#*#", "###"]; // true
 
-console.log(organizeShoes(shoes)); // [38, 42]
+console.log(inBox(box));
