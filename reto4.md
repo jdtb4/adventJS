@@ -3,7 +3,7 @@
 ## Reto #4 🎄 Decorando el árbol de Navidad 
 
 <details>
-    <summary>Ver enunciado</summary>
+    <summary>📝 Instrucciones</summary>
 <br/>
 
 ¡Es hora de poner el árbol de Navidad en casa! 🎄 Pero este año queremos que sea especial. Vamos a crear una función que recibe la altura del árbol (un entero positivo entre 1 y 100) y un carácter especial para decorarlo.
