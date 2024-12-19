@@ -1,16 +1,15 @@
-function organizeInventory(inventory) {
-  const result = {};
-
-  for (const { name, quantity, category } of inventory) {
-    if (!result[category]) {
-      result[category] = {};
-    }
-    result[category][name] = (result[category][name] || 0) + quantity;
+function createXmasTree(height, ornament) {
+  let tree = "";
+  for (let i = 0; i < height; i++) {
+    const spaces = "_".repeat(height - i - 1);
+    const leaves = ornament.repeat(2 * i + 1);
+    tree += spaces + leaves + spaces + "\n";
   }
 
-  return result;
+  const trunk = "_".repeat(height - 1) + "#" + "_".repeat(height - 1);
+  tree += trunk + "\n" + trunk;
+
+  return tree;
 }
 
-console.log(
-  organizeInventory([{ name: "doll", quantity: 5, category: "toys" }])
-); // { toys: { doll: 5 } }
+console.log(createXmasTree(5, "*"));

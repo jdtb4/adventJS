@@ -34,10 +34,18 @@ Retos de programación para navidad
         </tr>
         <tr>
             <td align = "center">3</td>
-            <td>🏗 Organizando el inventario 🚧</td>
+            <td>🏗 Organizando el inventario</td>
             <td align = "center">🟢</td>
             <td align = "center">🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto3.md">📝</a></td>
+        </tr>
+        <tr>
+            <td align = "center">4</td>
+            <td>🎄 Decorando el árbol de navidad</td>
+            <td align = "center">🟠</td>
+            <td align = "center">🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto4.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>

@@ -88,4 +88,4 @@ function organizeInventory(inventory) {
 
 >Puntuación: 🌟🌟🌟🌟🌟
 
-[⬆️ Ir al inicio](
+[⬅ Atras](https://github.com/jdtb4/adventJS)
