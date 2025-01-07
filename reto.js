@@ -1,14 +1,22 @@
-function drawRace(indices, length) {
-  const track = [];
-  for (let i = 0; i < indices.length; i++) {
-    const lane = Array(length).fill("~");
-    const pos = indices[i] < 0 ? length + indices[i] : indices[i];
-    lane[pos] = "r";
-    track.push(
-      " ".repeat(indices.length - i - 1) + lane.join("") + ` /${i + 1}`
-    );
-  }
-  return track.join("\n");
+function moveTrain(board, mov) {
+  const y = board.findIndex((b) => b.includes("@"));
+  const x = board[y]?.indexOf("@");
+
+  const positions = {
+    U: board[y - 1]?.[x],
+    R: board[y]?.[x + 1],
+    D: board[y + 1]?.[x],
+    L: board[y]?.[x - 1],
+  };
+
+  const info = {
+    "*": "eat",
+    "·": "none",
+  };
+
+  return info[positions[mov]] ?? "crash";
 }
 
-console.log(drawRace([0, 5, -3], 10));
+const board = ["·····", "*····", "@····", "o····", "o····"];
+
+console.log(moveTrain(board, "U")); // eat
