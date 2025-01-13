@@ -1,27 +1,25 @@
-function calculatePrice(ornaments) {
-  const values = {
-    "*": 1,
-    o: 5,
-    "^": 10,
-    "#": 50,
-    "@": 100,
+function isRobotBack(moves) {
+  const pos = [0, 0];
+  const directions = {
+    U: () => ++pos[1],
+    D: () => --pos[1],
+    L: () => --pos[0],
+    R: () => ++pos[0],
   };
-  let total = 0;
-  for (let i = 0; i < ornaments.length; i++) {
-    const current = ornaments[i];
-    const next = ornaments[i + 1];
 
-    if (!(current in values)) {
-      return undefined;
-    }
+  const invert = { U: "D", D: "U", L: "R", R: "L" };
+  const cmd = [];
 
-    if (next && values[current] < values[next]) {
-      total -= values[current];
-    } else {
-      total += values[current];
-    }
+  for (let i = 0; i < moves.length; i++) {
+    if (moves[i] === "*") cmd.push(moves[i + 1]);
+    else if (moves[i - 1] === "!") cmd.push(invert[moves[i]]);
+    else if (moves[i - 1] === "?" && cmd.includes(moves[i])) cmd.push("");
+    else cmd.push(moves[i]);
+
+    directions[cmd.at(-1)]?.();
   }
-  return total;
+
+  return pos[0] === 0 && pos[1] === 0 ? true : pos;
 }
 
-console.log(calculatePrice("*o@")); // 66
+console.log(isRobotBack("R?L")); // true
