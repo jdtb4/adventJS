@@ -172,6 +172,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto22.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">23</td>
+            <td>🔢 Encuentra los números perdidos</td>
+            <td align = "center">🔴</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto23.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>

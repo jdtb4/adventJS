@@ -1,17 +1,12 @@
-function generateGiftSets(gifts) {
-  const result = [];
-  function backtrack(start, current) {
-    if (current.length > 0) {
-      result.push([...current]);
-    }
-    for (let i = start; i < gifts.length; i++) {
-      current.push(gifts[i]);
-      backtrack(i + 1, current);
-      current.pop();
+function findMissingNumbers(numbers) {
+  const n = Math.max(...numbers);
+  const missingNumbers = [];
+  for (let i = 1; i <= n; i++) {
+    if (!numbers.includes(i)) {
+      missingNumbers.push(i);
     }
   }
-  backtrack(0, []);
-  return result.sort((a, b) => a.length - b.length);
+  return missingNumbers;
 }
 
-console.log(generateGiftSets(["car", "doll", "puzzle"]));
+console.log(findMissingNumbers([1, 2, 4, 6])); // [1, 5, 6, 8]
