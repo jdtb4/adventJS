@@ -1,24 +1,37 @@
-function findInAgenda(agenda, phone) {
-  const entries = agenda
-    .split("\n")
-    .map((ag) => {
-      const name = ag.slice(ag.indexOf("<"), ag.indexOf(">") + 1);
-      const phone = ag.slice(ag.indexOf("+"), ag.indexOf("+") + 15);
-      return {
-        name: name.replace("<", "").replace(">", ""),
-        address: ag.replace(name, "").replace(phone, "").trim(),
-        phone: phone,
-      };
-    })
-    .filter((ag) => ag.phone.includes(phone));
+function distributeWeight(weight) {
+  const sizes = [10, 5, 2, 1];
+  const boxes = [];
+  const boxR = {
+    1: [" _ ", "|_|"],
+    2: [" ___ ", "|___|"],
+    5: [" _____ ", "|     |", "|_____|"],
+    10: [" _________ ", "|         |", "|_________|"],
+  };
 
-  return entries.length === 1
-    ? { name: entries[0].name, address: entries[0].address }
-    : null;
+  for (let size of sizes) {
+    while (weight >= size) {
+      boxes.push(size);
+      weight -= size;
+    }
+  }
+
+  return boxes
+    .map((value, i) => {
+      let top = boxes[i + 1]
+        ? boxR[boxes[i + 1]]?.at(-1)
+        : boxR[boxes[i]]?.at(0);
+      let bottom = boxR[value].length <= 2 ? "" : boxR[value].at(1);
+      top += boxR[value]
+        .at(0)
+        .slice(top?.length ?? 0)
+        .trim();
+
+      return [top, bottom, i === 0 && boxR[value].at(-1)]
+        .filter(Boolean)
+        .join("\n");
+    })
+    .reverse()
+    .join("\n");
 }
 
-const agenda = `+34-600-123-456 Calle Gran Via 12 <Juan Perez>
-Plaza Mayor 45 Madrid 28013 <Maria Gomez> +34-600-987-654
-<Carlos Ruiz> +1-800-555-0199 Fifth Ave New York`;
-
-console.log(findInAgenda(agenda, "34-600-123-456"));
+console.log(distributeWeight(3));

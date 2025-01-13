@@ -144,6 +144,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto18.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">19</td>
+            <td>📦 Apila cajas mágicas para repartir regalos</td>
+            <td align = "center">🔴</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto19.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>
