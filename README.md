@@ -95,6 +95,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto11.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">12</td>
+            <td>💵 ¿Cuánto cuesta el árbol?</td>
+            <td align = "center">🟢</td>
+            <td>🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto12.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>
