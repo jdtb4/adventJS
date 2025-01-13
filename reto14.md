@@ -66,6 +66,7 @@ function minMovesToStables(reindeer, stables) {
 
 <br/>
 
+> Puntuacion: 🌟🌟🌟🌟🌟
 
 [⬅ Atras](https://github.com/jdtb4/adventJS)
 
