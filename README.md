@@ -151,6 +151,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto19.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">20</td>
+            <td>🎁 Encuentra los regalos faltantes y duplicados</td>
+            <td align = "center">🟢</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto20.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>

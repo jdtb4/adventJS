@@ -1,37 +1,36 @@
-function distributeWeight(weight) {
-  const sizes = [10, 5, 2, 1];
-  const boxes = [];
-  const boxR = {
-    1: [" _ ", "|_|"],
-    2: [" ___ ", "|___|"],
-    5: [" _____ ", "|     |", "|_____|"],
-    10: [" _________ ", "|         |", "|_________|"],
-  };
+function fixGiftList(received, expected) {
+  const countItems = (arr) =>
+    arr.reduce((acc, item) => {
+      acc[item] = (acc[item] || 0) + 1;
+      return acc;
+    }, {});
 
-  for (let size of sizes) {
-    while (weight >= size) {
-      boxes.push(size);
-      weight -= size;
+  const receivedCount = countItems(received);
+  const expectedCount = countItems(expected);
+
+  const missing = {},
+    extra = {};
+
+  for (const item in expectedCount) {
+    const receivedQty = receivedCount[item] || 0;
+    if (receivedQty < expectedCount[item]) {
+      missing[item] = expectedCount[item] - receivedQty;
     }
   }
 
-  return boxes
-    .map((value, i) => {
-      let top = boxes[i + 1]
-        ? boxR[boxes[i + 1]]?.at(-1)
-        : boxR[boxes[i]]?.at(0);
-      let bottom = boxR[value].length <= 2 ? "" : boxR[value].at(1);
-      top += boxR[value]
-        .at(0)
-        .slice(top?.length ?? 0)
-        .trim();
+  for (const item in receivedCount) {
+    const expectedQty = expectedCount[item] || 0;
+    if (receivedCount[item] > expectedQty) {
+      extra[item] = receivedCount[item] - expectedQty;
+    }
+  }
 
-      return [top, bottom, i === 0 && boxR[value].at(-1)]
-        .filter(Boolean)
-        .join("\n");
-    })
-    .reverse()
-    .join("\n");
+  return { missing, extra };
 }
 
-console.log(distributeWeight(3));
+console.log(
+  fixGiftList(
+    ["puzzle", "car", "doll", "car"],
+    ["car", "puzzle", "doll", "ball"]
+  )
+);
