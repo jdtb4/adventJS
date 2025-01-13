@@ -158,6 +158,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto20.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">21</td>
+            <td>🎄 Calcula la altura del árbol de navidad</td>
+            <td align = "center">🟢</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto21.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>
