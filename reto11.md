@@ -50,7 +50,7 @@ function decodeFilename(filename) {
 
 ```
 
->Puntuacion: 🌟🌟🌟🌟
+>Puntuacion: 🌟🌟🌟🌟🌟
 
 <br/>
 

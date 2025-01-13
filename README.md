@@ -91,7 +91,7 @@ Retos de programación para navidad
         <tr></tr>
             <td align = "center">11</td>
             <td>🏴‍☠️ Nombres de archivos codificados</td>
-            <td align = "center">🔴</td>
+            <td align = "center">🟢</td>
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto11.md">📝</a></td>
         </tr>
