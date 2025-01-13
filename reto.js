@@ -1,22 +1,25 @@
-function moveTrain(board, mov) {
-  const y = board.findIndex((b) => b.includes("@"));
-  const x = board[y]?.indexOf("@");
+function compile(instructions) {
+  let registers = {};
+  let i = 0;
 
-  const positions = {
-    U: board[y - 1]?.[x],
-    R: board[y]?.[x + 1],
-    D: board[y + 1]?.[x],
-    L: board[y]?.[x - 1],
-  };
+  while (i < instructions.length) {
+    let [op, x, y] = instructions[i].split(" ");
 
-  const info = {
-    "*": "eat",
-    "·": "none",
-  };
+    if (op === "MOV") {
+      registers[y] = isNaN(x) ? registers[x] || 0 : Number(x);
+    } else if (op === "INC") {
+      registers[x] = (registers[x] || 0) + 1;
+    } else if (op === "DEC") {
+      registers[x] = (registers[x] || 0) - 1;
+    } else if (op === "JMP") {
+      if ((registers[x] || 0) === 0) {
+        // Asegúrate de que registers[x] sea evaluado correctamente
+        i = Number(y) - 1; // Convierte y a número
+      }
+    }
 
-  return info[positions[mov]] ?? "crash";
+    i++;
+  }
+
+  return registers["A"];
 }
-
-const board = ["·····", "*····", "@····", "o····", "o····"];
-
-console.log(moveTrain(board, "U")); // eat
