@@ -91,7 +91,7 @@ function drawTable(data) {
 
 <br/>
 
-> Puntuación 🌟🌟🌟🌟🌟
+> Puntuación 🌟🌟🌟🌟
 
 
 [⬅ Atras](https://github.com/jdtb4/adventJS)
