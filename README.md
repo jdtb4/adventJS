@@ -130,6 +130,14 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto16.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">17</td>
+            <td>💣 Busca las bombas del Grinch</td>
+            <td align = "center">🟠</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto17.md">📝</a></td>
+        </tr>
+        
     </tbody>
 </table>
 </div>

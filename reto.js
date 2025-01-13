@@ -1,15 +1,30 @@
-function removeSnow(s) {
-  let arr = s.split("");
-  let i = 0;
-  while (i < arr.length) {
-    if (arr[i] === arr[i + 1]) {
-      arr.splice(i, 2);
-      i = 0;
-    } else {
-      i++;
+function detectBombs(grid) {
+  let result = [];
+  for (let i = 0; i < grid.length; i++) {
+    let row = [];
+    for (let j = 0; j < grid[i].length; j++) {
+      let count = 0;
+      for (let x = -1; x <= 1; x++) {
+        for (let y = -1; y <= 1; y++) {
+          if (grid[i + x] && grid[i + x][j + y]) {
+            count++;
+          }
+        }
+      }
+      if (grid[i][j]) {
+        count--;
+      }
+      row.push(count);
     }
+    result.push(row);
   }
-  return arr.join("");
+  return result;
 }
 
-console.log(removeSnow("aaabccddd")); // "abd"
+console.log(
+  detectBombs([
+    [true, true],
+    [false, false],
+    [true, true],
+  ])
+);
