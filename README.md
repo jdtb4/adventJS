@@ -85,8 +85,15 @@ Retos de programación para navidad
             <td align = "center">10</td>
             <td>👩‍💻 El ensamblador élfico</td>
             <td align = "center">🟠</td>
-            <td>🌟🌟🌟🌟🌟</td>
+            <td>🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto10.md">📝</a></td>
+        </tr>
+        <tr></tr>
+            <td align = "center">11</td>
+            <td>🏴‍☠️ Nombres de archivos codificados</td>
+            <td align = "center">🔴</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto11.md">📝</a></td>
         </tr>
     </tbody>
 </table>

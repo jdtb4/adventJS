@@ -90,3 +90,9 @@ function moveTrain(board, mov) {
 
 ``` 
 
+>Puntuacion: 🌟🌟🌟🌟🌟 
+
+<br/>
+
+
+[⬅ Atras](https://github.com/jdtb4/adventJS)
