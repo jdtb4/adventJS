@@ -137,7 +137,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto17.md">📝</a></td>
         </tr>
-        
+        <tr>
+            <td align = "center">18</td>
+            <td>📇 La agenda mágica de Santa</td>
+            <td align = "center">🔴</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto18.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>
