@@ -109,6 +109,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto13.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">14</td>
+            <td>🦌 Acomodando los renos</td>
+            <td align = "center">🟢</td>
+            <td>🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto14.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>
