@@ -165,6 +165,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto21.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">22</td>
+            <td>🎁 Genera combinaciones de regalos</td>
+            <td align = "center">🟠</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto22.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>
