@@ -179,6 +179,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto23.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">24</td>
+            <td>Verifica si los arboles son espejos mágicos</td>
+            <td align = "center">🟠</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto24.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>

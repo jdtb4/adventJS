@@ -1,12 +1,10 @@
-function findMissingNumbers(numbers) {
-  const n = Math.max(...numbers);
-  const missingNumbers = [];
-  for (let i = 1; i <= n; i++) {
-    if (!numbers.includes(i)) {
-      missingNumbers.push(i);
-    }
-  }
-  return missingNumbers;
-}
+function isTreesSynchronized(tree1, tree2) {
+  if (tree1?.left && !isTreesSynchronized(tree1.left, tree2.right)[0])
+    return [false, tree1.value];
+  if (tree1?.right && !isTreesSynchronized(tree1.right, tree2.left)[0])
+    return [false, tree1.value];
 
-console.log(findMissingNumbers([1, 2, 4, 6])); // [1, 5, 6, 8]
+  return tree1.value === tree2.value
+    ? [true, tree1.value]
+    : [false, tree1.value];
+}
