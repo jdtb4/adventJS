@@ -1,10 +1,19 @@
-function isTreesSynchronized(tree1, tree2) {
-  if (tree1?.left && !isTreesSynchronized(tree1.left, tree2.right)[0])
-    return [false, tree1.value];
-  if (tree1?.right && !isTreesSynchronized(tree1.right, tree2.left)[0])
-    return [false, tree1.value];
+function execute(code) {
+  let value = 0;
+  let i = 0;
+  let lastIndex = 0;
 
-  return tree1.value === tree2.value
-    ? [true, tree1.value]
-    : [false, tree1.value];
+  const cmds = {
+    "+": () => ++value,
+    "-": () => --value,
+    "[": () => {
+      if (value === 0) i = code.indexOf("]", i);
+      lastIndex = i;
+    },
+    "]": () => value !== 0 && (i = lastIndex),
+    "{": () => value === 0 && (i = code.indexOf("}", i)),
+  };
+
+  for (i; i < code.length; i++) cmds[code[i]]?.();
+  return value;
 }

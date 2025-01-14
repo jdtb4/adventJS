@@ -186,6 +186,13 @@ Retos de programación para navidad
             <td>🌟🌟🌟🌟🌟</td>
             <td align = "center"><a href = "./reto24.md">📝</a></td>
         </tr>
+        <tr>
+            <td align = "center">25</td>
+            <td>🪄 Ejecuta el leguaje mágico</td>
+            <td align = "center">🟠</td>
+            <td>🌟🌟🌟🌟🌟</td>
+            <td align = "center"><a href = "./reto25.md">📝</a></td>
+        </tr>
     </tbody>
 </table>
 </div>
